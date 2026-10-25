@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalan Engenharia Ltda - Engenharia e Construção de Alta Qualidade</title>
+    <meta name="description" content="Catalan Engenharia Ltda. - Conheça a história de Rodolpho Vasconcellos Rodrigues e os serviços de alta qualidade em engenharia e construção que oferecemos em todo o Brasil.">
+    <meta name="keywords" content="engenharia, construção, Rodolpho Vasconcellos, Catalan Engenharia, obras de infraestrutura, construção civil">
+    <meta name="author" content="Catalan Engenharia Ltda.">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+     
+        
+        summary{
+            background-color: #005a8c;
+            padding: 20px;
+            border-radius: 5px;
+
+            color: white;
+        }
+
+        details {
+            background-color: #bbbbbb;
+
+            padding: 20px;
+            margin: auto;
+            width: 63%;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            cursor: pointer;
+        }
+        .hero {
+            background-image: url("./assets/banner.jpeg");
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            z-index: 1;
+            font-weight: 700;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero h1 span {
+            display: inline-block;
+            animation: bounce 1.5s infinite alternate;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        .content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+        .content h2 {
+            color: #007BFF;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        .content p {
+            line-height: 1.8;
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        .images-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .images-grid img {
+            width: 200px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .timeline {
+            margin: 3rem 0;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .timeline ul {
+            list-style: none;
+            padding: 0;
+        }
+        .timeline li {
+            margin: 2rem 0;
+            position: relative;
+            padding-left: 50px;
+        }
+        .timeline li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 25px;
+            height: 25px;
+            background-color: #007BFF;
+            border-radius: 50%;
+        }
+        .timeline li::after {
+            content: "";
+            position: absolute;
+            left: 12px;
+            top: 30px;
+            width: 2px;
+            height: calc(100% - 40px);
+            background-color: #007BFF;
+        }
+        .timeline li:last-child::after {
+            display: none;
+        }
+        .timeline h3 {
+            font-size: 1.6rem;
+            color: #007BFF;
+            margin: 0;
+        }
+        .timeline p {
+            margin: 0.5rem 0;
+            font-size: 1.15rem;
+            color: #555;
+        }
+        .services {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            margin: 2rem 0;
+        }
+        .services h2 {
+            color: #007BFF;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+            line-height: 1.8;
+        }
+        .services li {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        .contact-info {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 3rem;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .contact-info h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        .contact-info p {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+        .contact-info a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-info .contact-button {
+            margin-top: 1.5rem;
+        }
+        .contact-button a {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: #ffd700;
+            color: #007BFF;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .contact-button a:hover {
+            background-color: #ffcc00;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #333;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .language-switcher label {
+            font-weight: bold;
+            color: #007BFF;
+            margin-right: 8px;
+        }
+        .language-switcher img {
+            width: 30px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 2rem;
+            margin: auto;
+            max-width: 1000px;
+            background: #ffffff;
+            margin-top: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        section h2 {
+            color: #005a8c;
+        }
+
+        nav {
+            background: #003f63;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .content, .timeline, .services {
+                padding: 1.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .images-grid img {
+                width: 150px;
+            }
+        }
+
+        @media (max-width: 720px) {
+            details {
+                width: 80%;
+            }
+        }
+        
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Define a função para trocar o idioma
+            window.switchLanguage = switchLanguage;
+
+            // Detecta o idioma do navegador
+            const browserLanguage = navigator.language || navigator.languages[0];
+
+            // Mapeamento de idiomas do navegador para os idiomas suportados
+            const languageMap = {
+                'pt': 'Portuguese',
+                'es': 'Spanish',
+                'ar': 'Arabic',
+                'en': 'English'
+            };
+
+            // Define o idioma padrão com base na detecção do navegador
+            const userLanguage = languageMap[browserLanguage.slice(0, 2)] || 'Portuguese';
+
+            // Altera o idioma automaticamente
+            switchLanguage(userLanguage);
+        });
+
+        const translations = {
+            'Portuguese': {
+                'heroTitle': 'Bem-vindo à Catalan Engenharia Ltda.',
+                'historyTitle': 'A História de Rodolpho Vasconcellos Rodrigues',
+                'timelineTitle': 'Linha do Tempo da Empresa',
+                'servicesTitle': 'Áreas de Atuação',
+                'contactTitle': 'Contato',
+                'emailLabel': 'Email:',
+                'phoneLabel': 'Telefone:',
+                'whatsappLabel': 'WhatsApp:',
+                'contactButtonText': 'Entre em Contato',
+                'footerText': '&copy; 2024 Catalan Engenharia Ltda, CNPJ: 48.962.514/0001-54. Todos os direitos reservados. <a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a>',
+                'historyContent': [
+                    'Rodolpho Vasconcellos Rodrigues nasceu em 03 de março de 1973, na cidade do Rio de Janeiro, em Ipanema, na zona sul da cidade. Durante sua juventude, Rodolpho viveu na Espanha, onde adquiriu valiosas experiências culturais e profissionais.',
+                    'Aos 15 anos, ingressou na empresa de seu pai, iniciando sua carreira na construção civil e, aos 20 anos, tornou-se sócio, assumindo a diretoria financeira da Construtora Mendes Caldeira Ltda.',
+                    'Da empresa construtora Mendes Caldeira Ltda. Situada no Rio de Janeiro, com obras na prefeitura do Rio de Janeiro na área de pavimentação, drenagem, construção de casas e prédio na parte do setor privado. Trabalhou na prefeitura de Duque de Caxias no Rio de Janeiro, na prefeitura de Nova Iguaçu, Caxias, Petrópolis, Miguel Pereira, prestando serviço pro DER e para o DENIT.'
+                ],
+                'timelineContent': [
+                    '1988 - Início na Empresa Familiar: Rodolpho começou a trabalhar na empresa de seu pai...',
+                    '1993 - Sociedade e Direção Financeira: Aos 20 anos, tornou-se sócio da Construtora Mendes Caldeira Ltda...',
+                    '2022 - Fundação da Catalan Engenharia Ltda.: Fundou a Catalan Engenharia Ltda., voltada para a execução de obras de alta complexidade.'
+                ],
+                'servicesContent': [
+                    '2391502 - Aparelhamento de pedras para construção, exceto associado à extração',
+                    '4120400 - Construção de edifícios',
+                    '4211101 - Construção de rodovias e ferrovias',
+                    '4211102 - Pintura para sinalização em pistas rodoviárias e aeroportos',
+                    '4221901 - Construção de barragens e represas para geração de energia elétrica',
+                    '4299501 - Construção de instalações esportivas e recreativas',
+                    '4299599 - Outras obras de engenharia civil não especificadas anteriormente',
+                    '4313400 - Obras de terraplenagem',
+                    '4329104 - Montagem e instalação de sistemas e equipamentos de iluminação e sinalização em vias públicas, portos e aeroportos',
+                    '4330401 - Impermeabilização em obras de engenharia civil',
+                    '4330404 - Serviços de pintura de edifícios em geral',
+                    '4330499 - Outras obras de acabamento da construção',
+                    '4391600 - Obras de fundações',
+                    '4399101 - Administração de obras',
+                    '4399103 - Obras de alvenaria',
+                    '4399105 - Perfuração e construção de poços de água',
+                    '4399199 - Serviços especializados para construção não especificados anteriormente',
+                    '5240101 - Operação dos aeroportos e campos de aterrissagem',
+                    '7119703 - Serviços de desenho técnico relacionados à arquitetura e engenharia',
+                    '7119799 - Atividades técnicas relacionadas à engenharia e arquitetura não especificadas anteriormente',
+                    '8211300 - Serviços combinados de escritório e apoio administrativo'
+                ],
+                'brefingTitle': "Briefing Catalan Engenharia Ltda",
+                'brefingVisaoGeral': [
+                    'Visão Geral', 
+                    'A Catalan Engenharia atua no setor de construção civil e engenharia, oferecendo serviços diversificados como infraestrutura, edificações e especializações em técnicas avançadas, sempre com foco em qualidade e sustentabilidade.'
+                ],
+                'brefingMissao': [
+                    'Missão', 
+                    'Proporcionar soluções completas e sustentáveis em engenharia e construção, contribuindo para o desenvolvimento urbano e industrial com excelência técnica e inovação.'
+                ],
+                'brefingVisao': [
+                    'Visão', 
+                    'Ser referência nacional em engenharia e construção civil, reconhecida pela qualidade, ética e impacto positivo.'
+                ],
+                'brefingValores': [
+                    'Valores', 
+                    'Compromisso com a Qualidade e Sustentabilidade',
+                    'Ética e Transparência',
+                    'Inovação e Tecnologia',
+                    'Valorização das Pessoas',
+                    'Segurança no Trabalho'
+                ],
+                'brefingServicos': [
+                    'Serviços', 
+                    'Construção Civil e Edificações', 
+                    ['Construção e reforma de edifícios residenciais e comerciais', 'Obras de alvenaria e acabamento'],
+                    'Infraestrutura e Mobilidade',
+                    ['Construção de rodovias, ferrovias e pistas de aeroportos', 'Pintura e sinalização de vias públicas e aeroportos'],
+                    'Obras de Engenharia Especializada',
+                    ['Terraplenagem e fundações', 'Construção de barragens e represas', 'Obras de impermeabilização'],
+                    'Instalações e Montagens Técnicas',
+                    ['TIluminação e sinalização em vias públicas, portos e aeroportos', 'Montagem e operação de aeroportos e campos de pouso']
+                ],
+                'brefingDiferenciais': [
+                    'Diferenciais', 
+                    '<b>Equipe Multidisciplinar:</b> Engenheiros, arquitetos e técnicos qualificados.',
+                    '<b>Tecnologia Avançada:</b> Uso de softwares modernos.',
+                    '<b>Sustentabilidade:</b> Métodos que minimizam impactos ambientais.',
+                    '<b>Segurança e Confiabilidade:</b> Conformidade com normas rigorosas.'
+                ],
+            },
+            'Spanish': {
+                'heroTitle': 'Bienvenido a Catalan Ingeniería Ltda.',
+                'historyTitle': 'La Historia de Rodolpho Vasconcellos Rodrigues',
+                'timelineTitle': 'Línea de Tiempo de la Empresa',
+                'servicesTitle': 'Áreas de Actuación',
+                'contactTitle': 'Contacto',
+                'emailLabel': 'Correo Electrónico:',
+                'phoneLabel': 'Teléfono:',
+                'whatsappLabel': 'WhatsApp:',
+                'contactButtonText': 'Contáctenos',
+                'footerText': '&copy; 2024 Catalan Ingeniería Ltda, CNPJ: 48.962.514/0001-54. Todos los derechos reservados. <a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a>',
+                'historyContent': [
+                    'Rodolpho Vasconcellos Rodrigues nació el 3 de marzo de 1973 en la ciudad de Río de Janeiro, en Ipanema, en la zona sur de la ciudad. Durante su juventud, Rodolpho vivió en España, donde adquirió valiosas experiencias culturales y profesionales.',
+                    'A los 15 años, ingresó a la empresa de su padre, comenzando su carrera en la construcción civil y, a los 20 años, se convirtió en socio, asumiendo la dirección financiera de Constructora Mendes Caldeira Ltda.',
+                    'De la empresa constructora Mendes Caldeira Ltda., ubicada en Río de Janeiro, con proyectos en el área de pavimentación, drenaje, construcción de casas y edificios en el sector privado. Trabajó en la alcaldía de Duque de Caxias, en Río de Janeiro, y en las alcaldías de Nova Iguaçu, Caxias, Petrópolis y Miguel Pereira, prestando servicios para el DER y el DENIT.'
+                ],
+                'timelineContent': [
+                    '1988 - Inicio en la Empresa Familiar: Rodolpho comenzó a trabajar en la empresa de su padre...',
+                    '1993 - Sociedad y Dirección Financiera: A los 20 años, se convirtió en socio de Constructora Mendes Caldeira Ltda...',
+                    '2022 - Fundación de Catalan Ingeniería Ltda.: Fundó Catalan Ingeniería Ltda., enfocada en la ejecución de proyectos de alta complejidad.'
+                ],
+                'servicesContent': [
+                    '2391502 - Aparatos de piedras para construcción, excepto asociado a la extracción',
+                    '4120400 - Construcción de edificios',
+                    '4211101 - Construcción de carreteras y ferrocarriles',
+                    '4211102 - Pintura para señalización en carreteras y aeropuertos',
+                    '4221901 - Construcción de presas y represas para generación de energía eléctrica',
+                    '4299501 - Construcción de instalaciones deportivas y recreativas',
+                    '4299599 - Otras obras de ingeniería civil no especificadas anteriormente',
+                    '4313400 - Obras de nivelación de terreno',
+                    '4329104 - Montaje e instalación de sistemas y equipos de iluminación y señalización en vías públicas, puertos y aeropuertos',
+                    '4330401 - Impermeabilización en obras de ingeniería civil',
+                    '4330404 - Servicios de pintura de edificios en general',
+                    '4330499 - Otras obras de acabado de la construcción',
+                    '4391600 - Obras de cimentación',
+                    '4399101 - Administración de obras',
+                    '4399103 - Obras de albañilería',
+                    '4399105 - Perforación y construcción de pozos de agua',
+                    '4399199 - Servicios especializados para la construcción no especificados anteriormente',
+                    '5240101 - Operación de aeropuertos y campos de aterrizaje',
+                    '7119703 - Servicios de dibujo técnico relacionados con arquitectura e ingeniería',
+                    '7119799 - Actividades técnicas relacionadas con la ingeniería y arquitectura no especificadas anteriormente',
+                    '8211300 - Servicios combinados de oficina y apoyo administrativo'
+                ],
+                'brefingTitle': "Briefing Catalan Ingeniería Ltda",
+                'brefingVisaoGeral': [
+                    'Visión General', 
+                    'Catalan Ingeniería opera en el sector de la construcción civil e ingeniería, ofreciendo servicios diversificados como infraestructura, edificaciones y especialización en técnicas avanzadas, siempre con un enfoque en calidad y sostenibilidad.'
+                ],
+                'brefingMissao': [
+                    'Misión', 
+                    'Proporcionar soluciones completas y sostenibles en ingeniería y construcción, contribuyendo al desarrollo urbano e industrial con excelencia técnica e innovación.'
+                ],
+                'brefingVisao': [
+                    'Visión', 
+                    'Ser un referente nacional en ingeniería y construcción civil, reconocido por su calidad, ética e impacto positivo.'
+                ],
+                'brefingValores': [
+                    'Valores', 
+                    'Compromiso con la Calidad y la Sostenibilidad',
+                    'Ética y Transparencia',
+                    'Innovación y Tecnología',
+                    'Valoración de las Personas',
+                    'Seguridad en el Trabajo'
+                ],
+                'brefingServicos': [
+                    'Servicios', 
+                    'Construcción Civil y Edificaciones', 
+                    ['Construcción y reforma de edificios residenciales y comerciales', 'Obras de albañilería y acabados'],
+                    'Infraestructura y Movilidad',
+                    ['Construcción de carreteras, ferrocarriles y pistas de aeropuertos', 'Pintura y señalización de vías públicas y aeropuertos'],
+                    'Obras de Ingeniería Especializada',
+                    ['Movimientos de tierra y cimentaciones', 'Construcción de presas y embalses', 'Obras de impermeabilización'],
+                    'Instalaciones y Montajes Técnicos',
+                    ['Iluminación y señalización en vías públicas, puertos y aeropuertos', 'Montaje y operación de aeropuertos y pistas de aterrizaje']
+                ],
+                'brefingDiferenciais': [
+                    'Diferenciales', 
+                    '<b>Equipo Multidisciplinar:</b> Ingenieros, arquitectos y técnicos calificados.',
+                    '<b>Tecnología Avanzada:</b> Uso de software moderno.',
+                    '<b>Sostenibilidad:</b> Métodos que minimizan los impactos ambientales.',
+                    '<b>Seguridad y Confiabilidad:</b> Cumplimiento de normas rigurosas.'
+                ]              
+            },
+            'Arabic': {
+                'heroTitle': 'مرحبا بكم في شركة كاتالان للهندسة',
+                'historyTitle': 'قصة رودولفو فاسكونسيلوس رودريجيز',
+                'timelineTitle': 'خط الزمن للشركة',
+                'servicesTitle': 'مجالات التخصص',
+                'contactTitle': 'الاتصال',
+                'emailLabel': 'البريد الإلكتروني:',
+                'phoneLabel': 'الهاتف:',
+                'whatsappLabel': 'واتساب:',
+                'contactButtonText': 'تواصل معنا',
+                'footerText': '&copy; 2024 كاتالان الهندسية المحدودة، CNPJ: 48.962.514/0001-54. جميع الحقوق محفوظة. <a href="#">سياسة الخصوصية</a> | <a href="#">شروط الخدمة</a>',
+                'historyContent': [
+                    'ولد رودولفو فاسكونسيلوس رودريجيز في 3 مارس 1973 في مدينة ريو دي جانيرو، في إيبانيما، في المنطقة الجنوبية من المدينة. خلال شبابه، عاش رودولفو في إسبانيا حيث اكتسب خبرات ثقافية ومهنية قيمة.',
+                    'في سن الخامسة عشرة، التحق بشركة والده، وبدأ مسيرته المهنية في البناء المدني، وفي سن العشرين أصبح شريكًا، وتولى الإدارة المالية لشركة مينديز كالدييرا المحدودة.',
+                    'من شركة مينديز كالدييرا المحدودة، الواقعة في ريو دي جانيرو، مع مشاريع في مجال الرصف والصرف الصحي، وبناء المنازل والمباني في القطاع الخاص. عمل مع بلديات دوكي دي كاشياس، ونوفا إيغواسو، وكاشياس، وبيترس، وميغيل بيريرا، وقدّم خدمات لـ DER و DENIT.'
+                ],
+                'timelineContent': [
+                    '1988 - البداية في شركة العائلة: بدأ رودولفو العمل في شركة والده...',
+                    '1993 - الشراكة والإدارة المالية: في سن العشرين، أصبح شريكًا في شركة مينديز كالدييرا...',
+                    '2022 - تأسيس شركة كاتالان للهندسة المحدودة: أسس شركة كاتالان للهندسة المحدودة، المخصصة لتنفيذ مشاريع عالية التعقيد.'
+                ],
+                'servicesContent': [
+                    '2391502 - تجهيز الحجارة للبناء، باستثناء المرتبطة بالاستخراج',
+                    '4120400 - بناء المباني',
+                    '4211101 - بناء الطرق والسكك الحديدية',
+                    '4211102 - طلاء للإشارات على الطرق والمطارات',
+                    '4221901 - بناء السدود والحواجز لتوليد الطاقة الكهربائية',
+                    '4299501 - بناء المنشآت الرياضية والترفيهية',
+                    '4299599 - أعمال الهندسة المدنية الأخرى غير المصنفة في مكان آخر',
+                    '4313400 - أعمال تسوية الأرض',
+                    '4329104 - تركيب الأنظمة والمعدات الخاصة بالإضاءة والإشارات في الطرق والموانئ والمطارات',
+                    '4330401 - العزل في أعمال الهندسة المدنية',
+                    '4330404 - خدمات طلاء المباني بشكل عام',
+                    '4330499 - أعمال تشطيب البناء الأخرى',
+                    '4391600 - أعمال الأساسات',
+                    '4399101 - إدارة المشاريع',
+                    '4399103 - أعمال البناء بالطوب',
+                    '4399105 - حفر وبناء آبار المياه',
+                    '4399199 - خدمات متخصصة في البناء غير مصنفة في مكان آخر',
+                    '5240101 - تشغيل المطارات ومهابط الطائرات',
+                    '7119703 - خدمات الرسم الفني المتعلقة بالهندسة المعمارية والهندسة',
+                    '7119799 - الأنشطة التقنية المتعلقة بالهندسة والمعمارية غير المصنفة في مكان آخر',
+                    '8211300 - خدمات المكتب والدعم الإداري المشترك'
+                ],
+                'brefingTitle': "إحاطة شركة كاتالان للهندسة المحدودة",
+                'brefingVisaoGeral': [
+                    'نظرة عامة', 
+                    'تعمل شركة كاتالان للهندسة في قطاع البناء والهندسة المدنية، مقدمةً خدمات متنوعة مثل البنية التحتية، المباني، والتخصص في تقنيات متقدمة، مع التركيز دائمًا على الجودة والاستدامة.'
+                ],
+                'brefingMissao': [
+                    'الرسالة', 
+                    'تقديم حلول شاملة ومستدامة في الهندسة والبناء، والمساهمة في التنمية الحضرية والصناعية بامتياز تقني وابتكار.'
+                ],
+                'brefingVisao': [
+                    'الرؤية', 
+                    'أن تكون مرجعًا وطنيًا في مجال الهندسة والبناء المدني، معترفًا بها للجودة، والأخلاقيات، والتأثير الإيجابي.'
+                ],
+                'brefingValores': [
+                    'القيم', 
+                    'الالتزام بالجودة والاستدامة',
+                    'الشفافية والأخلاقيات',
+                    'الابتكار والتكنولوجيا',
+                    'تقدير الأفراد',
+                    'السلامة في العمل'
+                ],
+                'brefingServicos': [
+                    'خدمات', 
+                    'البناء والمباني المدنية', 
+                    ['بناء وتجديد المباني السكنية والتجارية', 'أعمال البناء والتشطيب'],
+                    'البنية التحتية والتنقل',
+                    ['بناء الطرق، السكك الحديدية ومدارج المطارات', 'الطلاء ووضع العلامات على الطرق العامة والمطارات'],
+                    'أعمال الهندسة المتخصصة',
+                    ['أعمال الحفر والأساسات', 'بناء السدود والخزانات', 'أعمال العزل المائي'],
+                    'التركيبات والتجهيزات التقنية',
+                    ['الإضاءة والإشارات في الطرق العامة، الموانئ، والمطارات', 'تركيب وتشغيل المطارات ومدارج الهبوط']
+                ],
+                'brefingDiferenciais': [
+                    'الاختلافات', 
+                    '<b>فريق متعدد التخصصات:</b> مهندسون، معماريون، وفنيون مؤهلون.',
+                    '<b>التكنولوجيا المتقدمة:</b> استخدام برامج حديثة.',
+                    '<b>الاستدامة:</b> أساليب تقلل من التأثير البيئي.',
+                    '<b>السلامة والموثوقية:</b> الالتزام بالمعايير الصارمة.'
+                ]
+            },
+            'English': {
+                'heroTitle': 'Welcome to Catalan Engineering Ltd.',
+                'historyTitle': 'The History of Rodolpho Vasconcellos Rodrigues',
+                'timelineTitle': 'Company Timeline',
+                'servicesTitle': 'Areas of Expertise',
+                'contactTitle': 'Contact',
+                'emailLabel': 'Email:',
+                'phoneLabel': 'Phone:',
+                'whatsappLabel': 'WhatsApp:',
+                'contactButtonText': 'Contact Us',
+                'footerText': '&copy; 2024 Catalan Engineering Ltd., CNPJ: 48.962.514/0001-54. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>',
+                'historyContent': [
+                    'Rodolpho Vasconcellos Rodrigues was born on March 3, 1973 in Rio de Janeiro, Ipanema...',
+                    'At the age of 15, he joined his father’s company, starting his career in civil construction...',
+                    'From Mendes Caldeira Ltda., situated in Rio, he worked on projects with the Rio City Hall...'
+                ],
+                'timelineContent': [
+                    '1988 - Beginning in the Family Business: Rodolpho started working in his father’s company...',
+                    '1993 - Partnership and Financial Management: At 20, he became a partner...',
+                    '2022 - Foundation of Catalan Engineering Ltd.: Established Catalan Engineering Ltd., focusing on high-complexity projects...'
+                ],
+                'servicesContent': [
+                    '2391502 - Stone processing for construction, excluding associated extraction',
+                    '4120400 - Building construction',
+                    '4211101 - Highway and railway construction',
+                    '4211102 - Road and airport marking painting',
+                    '4221901 - Dam and reservoir construction for energy generation',
+                    '4299501 - Construction of sports and recreational facilities',
+                    '4299599 - Other civil engineering works not elsewhere classified',
+                    '4313400 - Earthmoving works',
+                    '4329104 - Installation of lighting and signaling systems on public roads, ports, and airports',
+                    '4330401 - Waterproofing in civil engineering works',
+                    '4330404 - General building painting services',
+                    '4330499 - Other construction finishing works',
+                    '4391600 - Foundation works',
+                    '4399101 - Construction project management',
+                    '4399103 - Masonry works',
+                    '4399105 - Drilling and construction of water wells',
+                    '4399199 - Specialized construction services not elsewhere classified',
+                    '5240101 - Operation of airports and landing fields',
+                    '7119703 - Technical drawing services related to architecture and engineering',
+                    '7119799 - Technical engineering and architectural activities not elsewhere classified',
+                    '8211300 - Combined office and administrative support services'
+                ],
+                'brefingTitle': "Catalan Engineering Ltd Briefing",
+                'brefingVisaoGeral': [
+                    'Overview', 
+                    'Catalan Engineering operates in the construction and civil engineering sector, offering diversified services such as infrastructure, buildings, and specialization in advanced techniques, always focusing on quality and sustainability.'
+                ],
+                'brefingMissao': [
+                    'Mission', 
+                    'To provide comprehensive and sustainable solutions in engineering and construction, contributing to urban and industrial development with technical excellence and innovation.'
+                ],
+                'brefingVisao': [
+                    'Vision', 
+                    'To be a national reference in civil engineering and construction, recognized for quality, ethics, and positive impact.'
+                ],
+                'brefingValores': [
+                    'Values', 
+                    'Commitment to Quality and Sustainability',
+                    'Ethics and Transparency',
+                    'Innovation and Technology',
+                    'Valuing People',
+                    'Workplace Safety'
+                ],
+                'brefingServicos': [
+                    'Services', 
+                    'Civil Construction and Buildings', 
+                    ['Construction and renovation of residential and commercial buildings', 'Masonry and finishing works'],
+                    'Infrastructure and Mobility',
+                    ['Construction of highways, railways, and airport runways', 'Painting and signage for public roads and airports'],
+                    'Specialized Engineering Works',
+                    ['Earthworks and foundations', 'Construction of dams and reservoirs', 'Waterproofing works'],
+                    'Technical Installations and Assemblies',
+                    ['Lighting and signage on public roads, ports, and airports', 'Assembly and operation of airports and airstrips']
+                ],
+                'brefingDiferenciais': [
+                    'Differentials', 
+                    '<b>Multidisciplinary Team:</b> Qualified engineers, architects, and technicians.',
+                    '<b>Advanced Technology:</b> Use of modern software.',
+                    '<b>Sustainability:</b> Methods that minimize environmental impacts.',
+                    '<b>Safety and Reliability:</b> Compliance with strict standards.'
+                ]
+            }
+        };
+
+        function switchLanguage(language) {
+            const elements = {
+                heroTitle: document.querySelector('.hero h1'),
+                historyTitle: document.querySelector('.content h2'),
+                historyContent: document.querySelectorAll('.content p'),
+                timelineTitle: document.querySelector('.timeline h2'),
+                timelineContent: document.querySelectorAll('.timeline ul li'),
+                servicesTitle: document.querySelector('.services h2'),
+                servicesContent: document.querySelector('.services ul'),
+                contactTitle: document.querySelector('.contact-info h2'),
+                emailLabel: document.querySelector('.contact-info .email-label'),
+                phoneLabel: document.querySelector('.contact-info .phone-label'),
+                whatsappLabel: document.querySelector('.contact-info .whatsapp-label'),
+                contactButtonText: document.querySelector('.contact-button a'),
+                footerText: document.querySelector('footer p'),
+                brefingTitleText: document.querySelector('#brefingTitle'),
+                brefingVisaoGeralTitleText: document.querySelector('#brefingVisaoGeralTitle'),
+                brefingVisaoGeralDescriptionText: document.querySelector('#brefingVisaoGeralDescription'),
+                brefingMissaoTitleText: document.querySelector('#brefingMissaoTitle'),
+                brefingMissaoDescriptionText: document.querySelector('#brefingMissaoDescription'),
+                brefingVisaoTitleText: document.querySelector('#brefingVisaoTitle'),
+                brefingVisaoDescriptionText: document.querySelector('#brefingVisaoDescription'),
+                brefingValoresTitleText: document.querySelector('#brefingValoresTitle'),
+                brefingValoresDescriptionText1: document.querySelector('#brefingValoresDescription1'),
+                brefingValoresDescriptionText2: document.querySelector('#brefingValoresDescription2'),
+                brefingValoresDescriptionText3: document.querySelector('#brefingValoresDescription3'),
+                brefingValoresDescriptionText4: document.querySelector('#brefingValoresDescription4'),
+                brefingValoresDescriptionText5: document.querySelector('#brefingValoresDescription5'),
+                brefingServicosTitleText: document.querySelector('#brefingServicosTitle'),
+                brefingServicosTitleText1: document.querySelector('#brefingServicosTitle1'),
+                brefingServicosTitleText2: document.querySelector('#brefingServicosTitle2'),
+                brefingServicosTitleText3: document.querySelector('#brefingServicosTitle3'),
+                brefingServicosTitleText4: document.querySelector('#brefingServicosTitle4'),
+
+                brefingServicosDescriptionText1: document.querySelector('#brefingServicosDescriptionText1'),
+                brefingServicosDescriptionText2: document.querySelector('#brefingServicosDescriptionText2'),
+                brefingServicosDescriptionText3: document.querySelector('#brefingServicosDescriptionText3'),
+                brefingServicosDescriptionText4: document.querySelector('#brefingServicosDescriptionText4'),
+                brefingServicosDescriptionText5: document.querySelector('#brefingServicosDescriptionText5'),
+                brefingServicosDescriptionText6: document.querySelector('#brefingServicosDescriptionText6'),                
+                brefingServicosDescriptionText7: document.querySelector('#brefingServicosDescriptionText7'),
+                brefingServicosDescriptionText8: document.querySelector('#brefingServicosDescriptionText8'),
+                brefingServicosDescriptionText9: document.querySelector('#brefingServicosDescriptionText9'),
+
+                brefingDiferenciaisTitleText: document.querySelector('#brefingDiferenciaisTitle'),
+                brefingDiferenciaisDescriptionText1: document.querySelector('#brefingDiferenciaisDescription1'),
+                brefingDiferenciaisDescriptionText2: document.querySelector('#brefingDiferenciaisDescription2'),
+                brefingDiferenciaisDescriptionText3: document.querySelector('#brefingDiferenciaisDescription3'),
+                brefingDiferenciaisDescriptionText4: document.querySelector('#brefingDiferenciaisDescription4'),
+
+                brefingVisaoGeralTitleText: document.querySelector('#brefingVisaoGeralTitleHeader'),
+                brefingMissaoTitleText: document.querySelector('#brefingMissaoTitleHeader'),
+                brefingVisaoTitleText: document.querySelector('#brefingVisaoTitleHeader'),
+                brefingValoresTitleText: document.querySelector('#brefingValoresTitleHeader'),
+                brefingDiferenciaisTitleText: document.querySelector('#brefingDiferenciaisTitleHeader'),
+                brefingServicosTitleText: document.querySelector('#brefingServicosTitleHeader'),
+                contactTitleHeader: document.querySelector('#contactTitleHeader'),
+
+            };
+
+            const translation = translations[language];
+            elements.brefingTitleText.textContent = translation.brefingTitle
+            elements.brefingVisaoGeralTitleText.textContent = translation.brefingVisaoGeral[0]
+            elements.brefingVisaoGeralDescriptionText.textContent = translation.brefingVisaoGeral[1]
+            elements.brefingMissaoTitleText.textContent = translation.brefingMissao[0]
+            elements.brefingMissaoDescriptionText.textContent = translation.brefingMissao[1]
+            elements.brefingVisaoTitleText.textContent = translation.brefingVisao[0]
+            elements.brefingVisaoDescriptionText.textContent = translation.brefingVisao[1]
+            elements.brefingValoresTitleText.textContent = translation.brefingValores[0]
+            elements.brefingValoresDescriptionText1.textContent = translation.brefingValores[1]
+            elements.brefingValoresDescriptionText2.textContent = translation.brefingValores[2]
+            elements.brefingValoresDescriptionText3.textContent = translation.brefingValores[3]
+            elements.brefingValoresDescriptionText4.textContent = translation.brefingValores[4]
+            elements.brefingValoresDescriptionText5.textContent = translation.brefingValores[5]
+            elements.brefingServicosTitleText.textContent = translation.brefingServicos[0]
+            elements.brefingServicosTitleText1.textContent = translation.brefingServicos[1]
+            elements.brefingServicosTitleText2.textContent = translation.brefingServicos[3]
+            elements.brefingServicosTitleText3.textContent = translation.brefingServicos[5]
+            elements.brefingServicosTitleText4.textContent = translation.brefingServicos[7]
+            elements.brefingServicosDescriptionText1.textContent = translation.brefingServicos[2][0]
+            elements.brefingServicosDescriptionText2.textContent = translation.brefingServicos[2][1]
+            elements.brefingServicosDescriptionText3.textContent = translation.brefingServicos[4][0]
+            elements.brefingServicosDescriptionText4.textContent = translation.brefingServicos[4][1]
+            elements.brefingServicosDescriptionText5.textContent = translation.brefingServicos[6][0]
+            elements.brefingServicosDescriptionText6.textContent = translation.brefingServicos[6][1]
+            elements.brefingServicosDescriptionText7.textContent = translation.brefingServicos[6][2]
+            elements.brefingServicosDescriptionText8.textContent = translation.brefingServicos[8][0]
+            elements.brefingServicosDescriptionText9.textContent = translation.brefingServicos[8][1]
+  
+            elements.brefingDiferenciaisTitleText.textContent = translation.brefingDiferenciais[0]
+            elements.brefingDiferenciaisDescriptionText1.innerHTML = translation.brefingDiferenciais[1]
+            elements.brefingDiferenciaisDescriptionText2.innerHTML = translation.brefingDiferenciais[2]
+            elements.brefingDiferenciaisDescriptionText3.innerHTML = translation.brefingDiferenciais[3]
+            elements.brefingDiferenciaisDescriptionText4.innerHTML = translation.brefingDiferenciais[4]
+
+            elements.brefingVisaoGeralTitleText.textContent = translation.brefingVisaoGeral[0]
+            elements.brefingMissaoTitleText.textContent = translation.brefingMissao[0]
+            elements.brefingVisaoTitleText.textContent = translation.brefingVisao[0]
+            elements.brefingValoresTitleText.textContent = translation.brefingValores[0]
+            elements.brefingDiferenciaisTitleText.textContent = translation.brefingDiferenciais[0]
+            elements.brefingServicosTitleText.textContent = translation.brefingServicos[0]
+            elements.contactTitleHeader.textContent = translation.contactTitle
+
+            elements.heroTitle.textContent = translation.heroTitle;
+            elements.historyTitle.textContent = translation.historyTitle;
+            elements.timelineTitle.textContent = translation.timelineTitle;
+            elements.servicesTitle.textContent = translation.servicesTitle;
+            elements.contactTitle.textContent = translation.contactTitle;
+            elements.emailLabel.innerHTML = `${translation.emailLabel} <a href="mailto:rodolphorodrigues7303@gmail.com">rodolphorodrigues7303@gmail.com</a>`;
+            elements.phoneLabel.textContent = `${translation.phoneLabel} +55 28 99881-4640`;
+            elements.whatsappLabel.textContent = `${translation.whatsappLabel} +55 21 98203-7187`;
+            elements.contactButtonText.textContent = translation.contactButtonText;
+            elements.footerText.innerHTML = translation.footerText;
+
+            elements.historyContent.forEach((p, index) => {
+                p.textContent = translation.historyContent[index] || '';
+            });
+
+            elements.timelineContent.forEach((li, index) => {
+                const content = translation.timelineContent[index] || '';
+                const [title, description] = content.split(': ');
+                li.innerHTML = `<h3>${title || ''}</h3><p>${description || ''}</p>`;
+            });
+
+            elements.servicesContent.innerHTML = translation.servicesContent
+                .map(item => `<li>${item}</li>`)
+                .join('');
+        }
+    </script>
+</head>
+<body>
+    <div class="language-switcher">
+        <label>Escolha o idioma:</label>
+        <img src="./assets/Brasil.jpg" alt="Português" onclick="switchLanguage('Portuguese')">
+        <img src="./assets/espanha.jpg" alt="Español" onclick="switchLanguage('Spanish')">
+        <img src="./assets/arabe.jpg" alt="العربية" onclick="switchLanguage('Arabic')">
+        <img src="./assets/eua.jpg" alt="English" onclick="switchLanguage('English')">
+    </div>
+    <div class="hero">
+        <h1>Bem-vindo à Catalan Engenharia Ltda.</h1>
+    </div>
+    <nav>
+        <a id="brefingVisaoGeralTitleHeader" href="#visao-geral">Visão Geral</a>
+        <a id="brefingMissaoTitleHeader" href="#missao">Missão</a>
+        <a id="brefingVisaoTitleHeader" href="#visao">Visão</a>
+        <a id="brefingValoresTitleHeader" href="#valores">Valores</a>
+        <a id="brefingServicosTitleHeader" href="#servicos">Serviços</a>
+        <a id="brefingDiferenciaisTitleHeader" href="#diferenciais">Diferenciais</a>
+        <a id="contactTitleHeader" href="#contato">Contato</a>
+    </nav>
+    
+    <div class="content">
+        <h2>A História de Rodolpho Vasconcellos Rodrigues</h2>
+        <p>Rodolpho Vasconcellos Rodrigues nasceu em 03 de março de 1973, na cidade do Rio de Janeiro, em Ipanema, na zona sul da cidade. Durante sua juventude, Rodolpho viveu na Espanha, onde adquiriu valiosas experiências culturais e profissionais. Aos 15 anos, ingressou na empresa de seu pai, iniciando sua carreira na construção civil e, aos 20 anos, tornou-se sócio, assumindo a diretoria financeira da Construtora Mendes Caldeira Ltda.</p>
+        <p>Após o encerramento das atividades da construtora em 2005, Rodolpho dedicou-se a projetos residenciais particulares. Em 2006, fundou a Catalan Engenharia Ltda., com sede no Espírito Santo, preparada para enfrentar e executar obras de alta complexidade, consolidando sua reputação no setor de engenharia.</p>
+        <p>Da empresa construtora Mendes Caldeira Ltda. Situada no Rio de Janeiro,com obras na prefeitura do Rio de Janeiro na área de pavimentação,drenagem,construção de casas e prédio na parte do setor privado. Trabalhou na prefeitura de Duque de Caxias no Rio de Janeiro,na prefeitura de Nova Iguaçu . Caxias,Petrópolis,Miguel Pereira,prestando serviço pro Der e para o Denit.</p>
+        <div class="images-grid">
+            <img src="./assets/construcao01.jpg" alt="Trabalhadores em construção de edifício">
+            <img src="./assets/construcao02.jpg" alt="Vista de arranha-céus em construção">
+            <img src="./assets/construcao03.jpg" alt="Engenheiro inspecionando obra">
+            <img src="./assets/construcao04.jpg" alt="Obras de infraestrutura">
+            <img src="./assets/construcao05.jpg" alt="Canteiro de obras à noite">
+        </div>
+        <div class="timeline">
+            <h2>Linha do Tempo da Empresa</h2>
+            <ul>
+                <li>
+                    <h3>1988 - Início na Empresa Familiar</h3>
+                    <p>Rodolpho começou a trabalhar na empresa de seu pai, dando os primeiros passos na construção civil.</p>
+                </li>
+                <li>
+                    <h3>1993 - Sociedade e Direção Financeira</h3>
+                    <p>Aos 20 anos, tornou-se sócio da Construtora Mendes Caldeira Ltda. e assumiu a responsabilidade pela direção financeira.</p>
+                </li>
+                <li>
+                    <h3>2022 - Fundação da Catalan Engenharia Ltda.</h3>
+                    <p>Fundou a Catalan Engenharia Ltda., voltada para a execução de obras de alta complexidade.</p>
+                </li>
+            </ul>
+        </div>
+        <div class="services">
+            <h2>Áreas de Atuação</h2>
+            <ul>
+                <li>2391502 - Aparelhamento de pedras para construção, exceto associado à extração</li>
+                <li>4120400 - Construção de edifícios</li>
+                <li>4211101 - Construção de rodovias e ferrovias</li>
+                <li>4211102 - Pintura para sinalização em pistas rodoviárias e aeroportos</li>
+                <li>4221901 - Construção de barragens e represas para geração de energia elétrica</li>
+                <li>4299501 - Construção de instalações esportivas e recreativas</li>
+                <li>4299599 - Outras obras de engenharia civil não especificadas anteriormente</li>
+                <li>4313400 - Obras de terraplenagem</li>
+                <li>4329104 - Montagem e instalação de sistemas e equipamentos de iluminação e sinalização em vias públicas, portos e aeroportos</li>
+                <li>4330401 - Impermeabilização em obras de engenharia civil</li>
+                <li>4330404 - Serviços de pintura de edifícios em geral</li>
+                <li>4330499 - Outras obras de acabamento da construção</li>
+                <li>4391600 - Obras de fundações</li>
+                <li>4399101 - Administração de obras</li>
+                <li>4399103 - Obras de alvenaria</li>
+                <li>4399105 - Perfuração e construção de poços de água</li>
+                <li>4399199 - Serviços especializados para construção não especificados anteriormente</li>
+                <li>5240101 - Operação dos aeroportos e campos de aterrissagem</li>
+                <li>7119703 - Serviços de desenho técnico relacionados à arquitetura e engenharia</li>
+                <li>7119799 - Atividades técnicas relacionadas à engenharia e arquitetura não especificadas anteriormente</li>
+                <li>8211300 - Serviços combinados de escritório e apoio administrativo</li>
+            </ul>
+        </div>
+    </div>
+
+    <details>
+        <summary id="brefingTitle">
+            Briefing Catalan Engenharia Ltda
+        </summary>
+
+        <section id="visao-geral">
+            <h2 id="brefingVisaoGeralTitle">Visão Geral</h2>
+            <p id="brefingVisaoGeralDescription">A Catalan Engenharia atua no setor de construção civil e engenharia, oferecendo serviços diversificados como infraestrutura, edificações e especializações em técnicas avançadas, sempre com foco em qualidade e sustentabilidade.</p>
+        </section>
+        <section id="missao">
+            <h2 id="brefingMissaoTitle">Missão</h2>
+            <p id="brefingMissaoDescription">Proporcionar soluções completas e sustentáveis em engenharia e construção, contribuindo para o desenvolvimento urbano e industrial com excelência técnica e inovação.</p>
+            <h2 id="brefingVisaoTitle">Visão</h2>
+            <p id="brefingVisaoDescription">Ser referência nacional em engenharia e construção civil, reconhecida pela qualidade, ética e impacto positivo.</p>
+            <h2 id="brefingValoresTitle">Valores</h2>
+            <ul>
+                <li id="brefingValoresDescription1">Compromisso com a Qualidade e Sustentabilidade</li>
+                <li id="brefingValoresDescription2">Ética e Transparência</li>
+                <li id="brefingValoresDescription3">Inovação e Tecnologia</li>
+                <li id="brefingValoresDescription4">Valorização das Pessoas</li>
+                <li id="brefingValoresDescription5">Segurança no Trabalho</li>
+            </ul>
+        </section>
+        <section id="servicos">
+            <h2 id="brefingServicosTitle" >Portfólio de Serviços</h2>
+            <h3 id="brefingServicosTitle1">Construção Civil e Edificações</h3>
+            <ul>
+                <li id="brefingServicosDescriptionText1">Construção e reforma de edifícios residenciais e comerciais</li>
+                <li id="brefingServicosDescriptionText2">Obras de alvenaria e acabamento</li>
+            </ul>
+            <h3 id="brefingServicosTitle2">Infraestrutura e Mobilidade</h3>
+            <ul>
+                <li id="brefingServicosDescriptionText3">Construção de rodovias, ferrovias e pistas de aeroportos</li>
+                <li id="brefingServicosDescriptionText4">Pintura e sinalização de vias públicas e aeroportos</li>
+            </ul>
+            <h3 id="brefingServicosTitle3">Obras de Engenharia Especializada</h3>
+            <ul>
+                <li id="brefingServicosDescriptionText5">Terraplenagem e fundações</li>
+                <li id="brefingServicosDescriptionText6">Construção de barragens e represas</li>
+                <li id="brefingServicosDescriptionText7">Obras de impermeabilização</li>
+            </ul>
+            <h3 id="brefingServicosTitle4">Instalações e Montagens Técnicas</h3>
+            <ul>
+                <li id="brefingServicosDescriptionText8">Iluminação e sinalização em vias públicas, portos e aeroportos</li>
+                <li id="brefingServicosDescriptionText9">Montagem e operação de aeroportos e campos de pouso</li>
+            </ul>
+        </section>
+        <section id="diferenciais">
+            <h2 id="brefingDiferenciaisTitle">Diferenciais</h2>
+            <ul>
+                <li id="brefingDiferenciaisDescription1"><strong>Equipe Multidisciplinar:</strong> Engenheiros, arquitetos e técnicos qualificados.</li>
+                <li id="brefingDiferenciaisDescription2"><strong>Tecnologia Avançada:</strong> Uso de softwares modernos.</li>
+                <li id="brefingDiferenciaisDescription3"><strong>Sustentabilidade:</strong> Métodos que minimizam impactos ambientais.</li>
+                <li id="brefingDiferenciaisDescription4"><strong>Segurança e Confiabilidade:</strong> Conformidade com normas rigorosas.</li>
+            </ul>
+        </section>
+    </details>
+    <div class="contact-info" id="contato">
+        <h2>Contato</h2>
+        <p class="email-label">Email: <a href="mailto:rodolphorodrigues7303@gmail.com">rodolphorodrigues7303@gmail.com</a></p>
+        <p class="phone-label">Telefone: +55 28 99881-4640</p>
+        <p class="whatsapp-label">WhatsApp: +55 21 98203-7187</p>
+        <div class="contact-button">
+            <a href="mailto:rodolphorodrigues7303@gmail.com" class="contact-button-text">Entre em Contato</a>
+        </div>
+    </div>
+    <footer>
+        <p class="footer-text">&copy; 2024 Catalan Engenharia Ltda, CNPJ: 48.962.514/0001-54. Todos os direitos reservados. <a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a></p>
+    </footer>
+</body>
+</html>
